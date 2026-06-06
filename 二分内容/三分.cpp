@@ -1,5 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+int min_x,max_x;//范围
+double f(double x){
+	//函数
+}
 int main(){
 	//三分
 	double l = min_x, r = max_x;
@@ -26,7 +30,7 @@ int main(){
 		//}
 	}
 
-/ 最终 l 和 r 非常接近，任选一个计算即可
-	prif("%.6f\n", f(l));
-	retn 0;
+// 最终 l 和 r 非常接近，任选一个计算即可
+	printf("%.6f\n", f(l));
+	return 0;
 

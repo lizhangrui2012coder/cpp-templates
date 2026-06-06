@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+double check(double x){
+	//函数
+}
 int main(){
 	//小数二分 
 	double l = 0.0, r = 100000.0; // 根据题目数据范围设定

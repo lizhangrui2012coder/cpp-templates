@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+double check(double x){
+	//函数
+}
 int main(){
 	//找第一个大于等于x的位置 
 	int n;
