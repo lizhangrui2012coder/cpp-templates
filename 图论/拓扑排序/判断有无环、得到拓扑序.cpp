@@ -15,7 +15,8 @@ int main(){
     }
     queue<int> q;//维护当前入度为0、可以处理的点
     for(int i=1;i<=n;i++){
-        if(in_deg[i]==0)q.push(i);
+        if(in_deg[i]==0)
+            q.push(i);
     }
     while(!q.empty()){
         int u=q.front();//取出当前可以处理的点
