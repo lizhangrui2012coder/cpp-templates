@@ -19,6 +19,7 @@ void addEdge(int u,int v,int cap){// 添加一条容量为 cap 的边 u→v，�
     g[u].push_back(forward);
     g[v].push_back(backward);
 }
+//找路径
 bool bfs(int s,int t){//s是起点，t是终点
     queue <int> q;//BFS队列
     memset(vis,0,sizeof vis);
@@ -33,7 +34,7 @@ bool bfs(int s,int t){//s是起点，t是终点
                 vis[e.to]=1;
                 preNode[e.to]=u;
                 preEdge[e.to]=i;
-                if(e.to==t)
+                if(e.to==t)//找到终点了
                     return true;
                 q.push(e.to);
             }
@@ -53,11 +54,11 @@ int EK(int s,int t){
         v=t;
         while(v!=s){
             Edge &e=g[preNode[v]][preEdge[v]];
-            e.cap-=flow;
-            g[v][e.rev].cap+=flow;
-            v=preNode[v];
+            e.cap-=flow;//正向边-流量
+            g[v][e.rev].cap+=flow;//反向边+流量
+            v=preNode[v];//更新v
         }
-        ans+=flow;
+        ans+=flow;//最后最大流
     }
     return ans;
 }
