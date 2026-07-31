@@ -62,9 +62,7 @@ bool bfs(int S,int T){
     }
     return false;
 }
-int main(){
-    int S=0,T;
-    cin>>T;
+int dinic(int S,int T){
     int maxflow=0;
     while(bfs(S,T)){
         memset(cur,0,sizeof cur);
@@ -72,6 +70,17 @@ int main(){
             maxflow+=a;
         }
     }
-    cout<<maxflow;
+    return maxflow;
+}
+int main(){
+    int S,T;
+    int n,m;
+    cin>>n>>m>>S>>T;
+    for(int i=1;i<=m;i++){
+        int u,v,w;
+        cin>>u>>v>>w;
+        addEdge(u,v,w);
+    }
+    cout<<dinic(S,T);
     return 0;
 }
